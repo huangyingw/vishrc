@@ -1,4 +1,4 @@
-user=temp
-password=123
+user=condor
+password=temp123
 host=localhost
-dbinstance=recdb
+dbinstance=recdeveloper
