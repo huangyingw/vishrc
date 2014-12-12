@@ -7,6 +7,6 @@ case $extension in
     ;;
   findresult)
     sh ${1}
-    exit 0
+    read -p "press any key to continue...." update
     ;;
 esac
