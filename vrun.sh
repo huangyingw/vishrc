@@ -4,9 +4,10 @@ extension=${file##*.}
 case $extension in
   sql)
     ~/vishrc/vsql.sh ${1}
+    read -p "press any key to continue...." update
     ;;
   findresult)
     sh ${1}
-    exit 0
+    read -p "press any key to continue...." update
     ;;
 esac
