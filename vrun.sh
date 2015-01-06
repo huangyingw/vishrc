@@ -10,4 +10,8 @@ case $extension in
     sh ${1}
     read -p "press any key to continue...." update
     ;;
+  sh)
+    sh ${1}
+    read -p "press any key to continue...." update
+    ;;
 esac
