@@ -13,4 +13,5 @@ if [ -f "$find_result" ]; then
       ;;
   esac
 fi
-fgrep -wnH "$2" `cscope -dL -f "$1/"cscope.out -"$3""$2"|awk '!/findresult/{print $1}'|awk '!x[$0]++'` > "$find_result"  
+cscope -dL -f "$1/"cscope.out -"$3""$2"|awk '!/findresult/{print $1}'|awk '!x[$0]++' > ~/cscope_result
+xargs fgrep -wnH "$2" < ~/cscope_result > "$find_result"
