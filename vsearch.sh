@@ -1,5 +1,5 @@
 #!/bin/bash
-find_result="$1/""`echo "$2".csc.findresult |sed  -e "s/\//\_/g;s/\ /\_/g"`"
+find_result="$1/""`echo "$2"."$4".findresult |sed  -e "s/\//\_/g;s/\ /\_/g"`"
 if [ -f "$find_result" ]; then
   read -p "the search is already done, if you want to update, press u --> " update
   case $update in
@@ -13,4 +13,4 @@ if [ -f "$find_result" ]; then
       ;;
   esac
 fi
-fgrep -wnH "$2" `cscope -dL -f "$1/"cscope.out -4"$2"|awk '!/findresult/{print $1}'|awk '!x[$0]++'` > "$find_result"  
+fgrep -wnH "$2" `cscope -dL -f "$1/"cscope.out -"$3""$2"|awk '!/findresult/{print $1}'|awk '!x[$0]++'` > "$find_result"  
