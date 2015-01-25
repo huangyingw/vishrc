@@ -14,4 +14,8 @@ case $extension in
     sh ${1}
     read -p "press any key to continue...." update
     ;;
+  py)
+    python ${1} > result.findresult 2>&1 
+    read -p "press any key to continue...." update
+    ;;
 esac
