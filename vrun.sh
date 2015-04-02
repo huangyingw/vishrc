@@ -3,7 +3,7 @@ file=${1}
 extension=${file##*.}
 case $extension in
   sql)
-    ~/vishrc/vsql.sh ${1} > ${1}.findresult 2>&1   
+    ~/loadrc/vishrc/vsql.sh ${1} > ${1}.findresult 2>&1   
     read -p "press any key to continue...." update
     ;;
   findresult)
