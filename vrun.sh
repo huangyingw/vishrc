@@ -11,11 +11,11 @@ case $extension in
     read -p "press any key to continue...." update
     ;;
   sh)
-    sh ${1} > ${1}.findresult 2>&1   
+    sh ${1}
     read -p "press any key to continue...." update
     ;;
   py)
-    python ${1} > ${1}.findresult 2>&1   
+    python ${1}
     read -p "press any key to continue...." update
     ;;
 esac
